@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Jomolhari&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 1fr;;
+    grid-template-rows: auto 1fr 1fr 1fr;
+}
+
+aside {
+    background-color: rgb(1 145 212);
+    grid-area: 1 / 1 / 5 / 2;
+    padding: 20px;
+    width: 300px;
+    transition: 0.2s;
+}
+
+nav {
+    display: grid;
+    gap: 50px;
+    fill: white;
+    color: white;
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-auto-flow: column;
+    align-items: center;
+    font-size: 32px;
+}
+
+nav > div + div {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 20px;
+}
+
+nav > div > div {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-auto-flow: column;
+    align-items: center;
+    font-size: 24px;
+}
+
+svg {
+    height: 35px;
+    justify-self: center;
+}
+
+header {
+    background-color: white;
+    grid-area: 1 / 2 / 2 / 5;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr;
+    padding: 1.5rem 3rem;
+    height: 206px;
+    transition: 0.2s;
+}
+
+header > div {
+    display: grid;
+    grid-template-columns: auto 5fr auto auto auto;
+    grid-auto-flow: column;
+    justify-items: center;
+    align-items: center;
+}
+
+header > div:nth-child(1) img {
+    width: 55px;
+    height: auto;
+}
+
+header > div:nth-child(2) img {
+    width: 80px;
+    height: auto;
+}
+
+header > div > div:nth-child(2):has(input) {
+    justify-items: center;
+    width: 80%;
+    display: grid;
+    padding-left: 20px;
+}
+
+header > div > div:nth-child(2) > input {
+    background-color: rgb(1 145 212);
+    height: 36px;
+    width: 100%;
+    border: none;
+    border-radius: 1000px;
+    padding: 0 10px;
+    color: white;
+}
+
+.align-to-start {
+    justify-self: start;
+}
+
+.align-to-end {
+    justify-self: end;
+    padding-left: 20px;
+}
+
+.greeting-container {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.greeting {
+    padding-left: 20px;
+}
+
+.greeting > p:first-child {
+    font-size: 20px;
+}
+
+.greeting > p:nth-child(2) {
+    font-size: 48px;
+}
+
+.actions {
+    background-color: rgb(1 145 212);
+    width: 100px;
+    height: 50px;
+    border-radius: 1000px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    color: white;
+}
+
+main {
+    background-color: lightgray;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto auto;
+    grid-auto-flow: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    grid-area: 2 / 2 / 5 / 5;
+    overflow: auto;
+    width: 100%;
+}
+
+.main-content {
+    background-color: lightgray;
+    display: grid;
+    grid-template: 250px 250px 250px / minmax(332px, 562px) minmax(332px, 562px);
+    grid-auto-rows: 250px;
+    gap: 1rem;
+}
+
+.first-header {
+    grid-column: 1 / 2;
+}
+
+.content-card {
+    background-color: white;
+    border-radius: 0.375rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.content-card > div + div {
+    padding: 8px;
+}
+
+.content-card > div + div > div {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+}
+
+.content-card > div + div > div > svg {
+    fill: white;
+    padding-left: 10px;
+    height: 25px;
+}
+
+.content-card > div:nth-child(1) img {
+    width: 100%;
+    height: auto;
+}
+
+.content-card > div:nth-child(2) {
+    background-color: rgb(1 145 212 / 0.9);
+    position: absolute;
+    color: white;
+    width: 100%;
+    height: 75px;
+    bottom: 0;
+    display: grid;
+    grid-auto-flow: row;
+    align-items: center;
+}
+
+.secondary-content {
+    display: grid;
+    grid-template-columns: minmax(300px, 380px);
+    align-items: center;
+    gap: 20px;
+    height: min-content;
+}
+
+.secondary-content > div {
+    background-color: rgb(1 145 212);
+    height: 330px;
+    width: 100%;
+    display: grid;
+    font-size: 12px;
+    color: white;
+    padding: 30px 20px;
+    border-radius: 0.375rem;
+}
+
+.secondary-content h2 {
+    align-self: self-start;
+}
+
+.dividing-line {
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    border-radius: 1000px;
+}
+
+.item-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.trending-items {
+    display: grid;
+    grid-template: 1fr / auto 3fr;
+    
+    img {
+        width: 55px;
+        height: auto;
+    }
+
+    div {
+       align-self: center; 
+       margin-left: 10px;
+    }
+}
+
+.hamburger {
+    display: none;
+}
+
+.show-sidebar {
+    transform: translateX(0);
+}
+
+@media only screen and (max-width: 1375px) {
+    aside {
+        transform: translateX(-300px);
+        z-index: 1;
+    }
+
+    main {
+        grid-area: 2 / 1 / 5 / 5;
+    }
+
+    header {
+        grid-area: 1 / 1 / 2 / 5;
+    }
+
+    .hamburger {
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 1075px) {
+    .main-content {
+        grid-template: 250px 250px 250px / minmax(332px, 562px);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    header {
+        gap: 10px;
+        height: 306px;
+    }
+
+    .minimize-header {
+        height: 93px;
+    }
+
+    header > div:nth-child(2) {
+        grid-template: 1fr 1fr / 1fr 1fr 1fr;
+        gap: 10px;
+
+        .align-to-start:first-child {
+            justify-self: center;
+        }
+
+        .align-to-end {
+            justify-self: center;
+            padding: 0;
+        }
+    }
+
+    header > div > div:nth-child(2):has(input) {
+        width: min(330px, 100%);
+    }
+
+    .greeting-container {
+        grid-area: 1 / 1 / 2 / 4 ;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    main {
+        grid-template-columns: auto;
+        grid-auto-flow: row;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    header > div:first-child > div:has(p) {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    header {
+        padding: 1.5rem 1rem;
+    }
+
+    header > div {
+        .align-to-end {
+            padding-left: 5px;
+        }
+
+        .align-to-start {
+            padding-left: 5px;
+        }
+    }
+
+    header > div > div:nth-child(2):has(input) {
+        padding-left: 5px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .actions {
+        width: 70px;
+    }
+
+    .greeting > p:first-child {
+        font-size: 16px;
+    }
+
+    .greeting > p:nth-child(2) {
+        font-size: 36px;
+    }
+}
